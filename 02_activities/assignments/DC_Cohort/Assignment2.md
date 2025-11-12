@@ -14,10 +14,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-two`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [X] Create a branch called `assignment-two`.
+- [X] Ensure that the repository is public.
+- [X] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [X] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -54,7 +54,13 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Overwrites (Type 1)
+One row per customer in CUSTOMER_ADDRESS, with columns like customer_id, street, city, postal_code, country, and update_status or date.
+When the address changes, we just update that row. No history is kept. 
+
+History retention (Type 2)
+Many rows per customer in CUSTOMER_ADDRESS, with an identifier for each version of their address, and the same address fields, including effective_start_date, effective_end_date.
+When the address changes, we insert a new row and the old one is kept, with the the effective_end_date reflecting its use status. 
 ```
 
 ***
@@ -183,5 +189,11 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+The article makes it clear that AI systems depend heavily on human labour. People label data, moderate harmful content, and make quick judgments that later shape how models behave. Most of this work is low-paid, stressful, and invisible. That is the biggest ethical issue: the technology looks automated, but it is built on the labour of people who are rarely acknowledged or supported.
+
+Another issue is bias. Because people do the labeling, their own assumptions and cultural views end up in the dataset. This means models inherit those biases, even when companies describe them as objective. The choices about what to label, how to label it, and what to remove all reflect human values.
+
+The piece also highlights the emotional cost of moderation. Workers who filter violent or disturbing content carry the burden so users don’t have to see it. This creates a gap where the “clean” version of the internet is maintained by people who absorb the harm.
+
+Finally, the article reminds us that AI is part of society, not separate from it. Every model reflects the working conditions, decisions, and inequalities behind it. The ethical questions are simple: Are the people doing this work treated fairly? Are they protected? And do we recognize their role in the systems we rely on?
 ```
