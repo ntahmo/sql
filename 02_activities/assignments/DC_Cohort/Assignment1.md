@@ -172,6 +172,9 @@ Section 4:
 You can start this section anytime.
 
 Steps to complete this part of the assignment: - Read the article - Write, within this markdown file, \<1000 words.
+Steps to complete this part of the assignment:
+- Read the article
+- Write, within this markdown file, between 250 and 1000 words. No additional citations/sources are required.
 
 Ethics
 
